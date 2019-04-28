@@ -1,6 +1,5 @@
 # NYC_Yellow_Cab_Project
 Analyze and optimization on yellow cab data 
-
 ===================================
 ![Our Team](https://github.com/ChengdaoYang/NYC_Yellow_Cab_Project/blob/master/Files/map_path.png "Our Team")
 ===================================
