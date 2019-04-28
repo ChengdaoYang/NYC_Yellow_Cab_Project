@@ -17,7 +17,7 @@ def Greedy_Algorithm(start_zone):
     ## loading data
     matrix_PU_time= pd.read_csv('./Matrix/matrix_PU_time.csv',index_col=0)
     matrix_PU_time.columns =matrix_PU_time.columns.astype(float)
-
+    matrix_PU_time = matrix_PU_time*365/30
     matrix_PU_time.fillna(value=8*60, inplace=True)
     matrix_PU_wait_time = matrix_PU_time.set_index(matrix_PU_time.index.astype(int)).sort_index()
     
@@ -103,6 +103,7 @@ def Randomized_Greedy_Algorithm(start_zone, randomness=1, top=20):
     ## loading data
     matrix_PU_time= pd.read_csv('./Matrix/matrix_PU_time.csv',index_col=0)
     matrix_PU_time.columns =matrix_PU_time.columns.astype(float)
+    matrix_PU_time =matrix_PU_time*365/30
 
     matrix_PU_time.fillna(value=8*60, inplace=True)
     matrix_PU_wait_time = matrix_PU_time.set_index(matrix_PU_time.index.astype(int)).sort_index()
