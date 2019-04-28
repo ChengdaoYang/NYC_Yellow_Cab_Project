@@ -1,3 +1,4 @@
+geopandas
 plotly
 networkx
 pyshp
@@ -7,3 +8,4 @@ progressbar
 seaborn
 mpl_toolkits
 basemap
+
