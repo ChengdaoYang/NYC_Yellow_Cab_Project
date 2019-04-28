@@ -17,7 +17,8 @@ we clean and analyze the data, from which we then try to discover
 an optimal strategies for a taxi driver for in day base on the data 
 via machine learn, statistical test, integer programing and tailored algorithm
 base on graph theory.
-The problem as we defined is NP-hard, and we are yet to delivery the best
+The problem as we defined is NP-hard。
+After a week working on it, we are yet to delivery the best
 strategies for it, due to time and life constrains for us, humans.
 LOL, yes, another NP-hard problem, :P
 
