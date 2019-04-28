@@ -73,7 +73,7 @@ def Greedy_Algorithm(start_zone):
 
 
 
-def Randomized_Greedy_Algorithm(start_zone, randomness=3):
+def Randomized_Greedy_Algorithm(start_zone, randomness=1, top=20):
     '''Randomized Greedy algorithm search the at each states
     the minimized moving & wait time zone. with some randomness
     return a path, total_trip_time & total_waste
@@ -85,7 +85,10 @@ def Randomized_Greedy_Algorithm(start_zone, randomness=3):
         randomness(float): between 0 and 1 to given some 
         randomness like entropy function, but with 1 the most
         random and 0 == Greedy Alg
-        
+
+        top(int): between 1 and 262 to given some 
+        limitation on randomness, 1 == Greedy Alg
+
     Retrun:
         result_list(list): path of the taxi in a day
         
@@ -151,7 +154,7 @@ def Randomized_Greedy_Algorithm(start_zone, randomness=3):
                                             + np.array(matrix_PU_wait_time[0])).sort_values(by=0)
 
         # looking for the min 
-        trip_wait_time_table = trip_wait_time_table[:20].sample(random_number)
+        trip_wait_time_table = trip_wait_time_table[:top].sample(random_number)
         local_min_cost_zone = trip_wait_time_table.idxmin()[0]
         local_min_cost_time = trip_wait_time_table.min()[0]
         
