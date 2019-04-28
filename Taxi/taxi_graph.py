@@ -110,7 +110,7 @@ def graph_path(path):
             lat = [str(taxi_zone_map_geo['geometry'][path[0]].centroid.xy[1][0]) ],
             mode='markers',
             marker=go.scattermapbox.Marker(
-                size=116
+                size=16
             ),
             text='start zone',
         )
