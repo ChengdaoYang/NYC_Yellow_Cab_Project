@@ -104,7 +104,17 @@ def graph_path(path):
         )
     ]
     
-    
+    start_zones = [
+        go.Scattermapbox(
+           lon = [str(taxi_zone_map_geo['geometry'][path[0].centroid.xy[0][0]) ],
+            lat = [str(taxi_zone_map_geo['geometry'][path[0].centroid.xy[1][0]) ],
+            mode='markers',
+            marker=go.scattermapbox.Marker(
+                size=116
+            ),
+            text='start zone',
+        )
+    ]
     # add the GeoJson path object as a layer offline
     layers=[dict(sourcetype = 'geojson',
              source =the_geojson_type_dict,
