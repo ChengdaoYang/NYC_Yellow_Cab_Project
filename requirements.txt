@@ -1,0 +1,9 @@
+plotly
+networkx
+pyshp
+descartes
+shapely
+progressbar
+seaborn
+mpl_toolkits
+basemap
